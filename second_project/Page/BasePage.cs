@@ -38,5 +38,26 @@ namespace second_project.Page
             WaitUntilElementVisible(by);
             driver.FindElement(by).SendKeys(text);
         }
+        protected void SwitchTo(By by)
+        {
+            WaitUntilElementVisible(by);
+            driver.SwitchTo().Frame(driver.FindElement(by));
+        }
+        protected string GetTextAlert()
+        {
+            string value = driver.SwitchTo().Alert().Text;
+            return value;
+        }
+        protected void AcceptAlert()
+        {
+            driver.SwitchTo().Alert().Accept();
+        }
+        protected string GetText(By by)
+        {
+            string value = driver.FindElement(by).Text;
+            return value;
+        }
+      
+    
     }
 }

@@ -6,6 +6,6 @@ namespace second_project.Base
 {
     internal static class Constants
     {
-        public static readonly string BaseUrl = "https://jqueryui.com/";
+        public static readonly string BaseUrl = "https://jqueryui.com/demos";
     }
 }

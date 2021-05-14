@@ -20,7 +20,7 @@ namespace second_project.Test
             driver = new ChromeDriver("D:\\chromedriver");
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(25);
-            driver.Navigate().GoToUrl(baseUrl + "demos");
+            driver.Navigate().GoToUrl(baseUrl);
         }
 
         [TearDown]

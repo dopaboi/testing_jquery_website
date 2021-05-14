@@ -21,26 +21,30 @@ namespace second_project.Page
         {
             return webElement.Text;
         }
-        public void CheckInteractionsSection(String str)
+
+
+        public void CheckInteractionsSection(string str)
         {
-            Assert.Equals(checkSection(interactionsSection), str);
-        }
-        public void CheckWidgetSection(String str)
-        {
-            Assert.Equals(checkSection(widgetSection), str);
-        }
-        public void CheckEffectsSection(String str)
-        {
-            Assert.Equals(checkSection(effectsSection), str);
-        }
-        public void CheckUtilitiesSection(String str)
-        {
-            Assert.Equals(checkSection(utilitiesSection), str);
+            string value = GetText(interactionsSection);
+            Assert.AreEqual(str, value);
         }
 
-        private object checkSection(By interactionsSection)
+        public void CheckWidgetSection(string str)
         {
-            throw new NotImplementedException();
+            string value = GetText(widgetSection);
+            Assert.AreEqual(str, value);
         }
+        public void CheckEffectsSection(string str)
+        {
+            string value = GetText(effectsSection);
+            Assert.AreEqual(str, value);
+        }
+        public void CheckUtilitiesSection(string str)
+        {
+            string value = GetText(utilitiesSection);
+            Assert.AreEqual(str, value);
+        }
+
+       
     }
 }
