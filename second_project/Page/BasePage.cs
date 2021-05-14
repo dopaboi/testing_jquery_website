@@ -43,9 +43,19 @@ namespace second_project.Page
             WaitUntilElementVisible(by);
             driver.SwitchTo().Frame(driver.FindElement(by));
         }
+        protected void PressKeyboard(By by)
+        {
+            driver.FindElement(by).SendKeys(Keys.ArrowDown + Keys.ArrowDown + Keys.ArrowDown + Keys.ArrowDown + Keys.Enter);
+        }
+       
         protected string GetTextAlert()
         {
             string value = driver.SwitchTo().Alert().Text;
+            return value;
+        }
+        protected string GetValue(By by)
+        {
+            string value = driver.FindElement(by).GetAttribute("value");
             return value;
         }
         protected void AcceptAlert()
