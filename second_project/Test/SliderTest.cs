@@ -10,6 +10,7 @@ namespace second_project.Test
     public class SliderTest : BaseTest
     {
         private SliderPage sliderPage;
+        private readonly string _valueToInput = "12";
 
         [SetUp]
         public void Before()
@@ -17,11 +18,11 @@ namespace second_project.Test
             sliderPage = new SliderPage(driver);
         }
 
-        [Test]
+        [Test, Description("Checking that alert produces the same value as input")]
         public void SliderCheck()
         {
             sliderPage.SliderClick();
-            sliderPage.inputSlider("12");
+            Assert.AreEqual("12", sliderPage.inputSlider(_valueToInput));
         }
     }
 }

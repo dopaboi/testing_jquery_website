@@ -21,14 +21,16 @@ namespace second_project.Page
             Click(autocompleteClick);
         }
         
-        public void inputTag(string character)
+        public string inputTag(string character)
         {
             SwitchTo(iframe);
             Click(inputField);
             SendKeys(inputField, character);
+            //selectOptionWithText("Asp");
+            //autoCompleteBox();
             PressKeyboard(inputField);
             string characterFromInput = GetValue(inputField);
-            Assert.AreEqual("Asp", characterFromInput);
+            return characterFromInput;
         }
 
 

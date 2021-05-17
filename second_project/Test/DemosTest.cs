@@ -11,6 +11,10 @@ namespace second_project.Test
     public class DemosTest: BaseTest
     {
         private DemosPage demosPage;
+        private readonly string _interactions = "Interactions";
+        private readonly string _widget = "Widgets";
+        private readonly string _utilities = "Utilities";
+        private readonly string _effects = "Effects";
 
         [SetUp]
         public void Before()
@@ -18,14 +22,13 @@ namespace second_project.Test
             demosPage = new DemosPage(driver);
         }
 
-        [Test]
+        [Test, Description("Checking that the page has headers with the right text")]
         public void LeftMenuTest()
         {
-           
-            demosPage.CheckInteractionsSection("Interactions");
-            demosPage.CheckWidgetSection("Widgets");
-            demosPage.CheckUtilitiesSection("Utilities");
-            demosPage.CheckEffectsSection("Effects");
+            Assert.AreEqual("Interactions", demosPage.CheckInteractionsSection(_interactions));
+            Assert.AreEqual("Widgets", demosPage.CheckWidgetSection(_widget));
+            Assert.AreEqual("Utilities", demosPage.CheckUtilitiesSection(_utilities));
+            Assert.AreEqual("Effects", demosPage.CheckEffectsSection(_effects));
         }
 
     }

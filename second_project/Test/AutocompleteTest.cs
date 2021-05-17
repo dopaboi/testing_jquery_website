@@ -11,6 +11,7 @@ namespace second_project.Test
     public class AutocompleteTest: BaseTest
     {
         private AutocompletePage autocompletePage;
+        private readonly string _symbolToAutocomplete = "a";
 
         [SetUp]
         public void Before()
@@ -18,11 +19,12 @@ namespace second_project.Test
             autocompletePage = new AutocompletePage(driver);
         }
 
-        [Test]
+        [Test, Description("Check that autocomplete gives the correct value")]
         public void AutocompleteCheck()
         {
             autocompletePage.ClickAutocomplete();
-            autocompletePage.inputTag("a");
+            Assert.AreEqual("Asp", autocompletePage.inputTag(_symbolToAutocomplete));
+            
         }
     }
 }

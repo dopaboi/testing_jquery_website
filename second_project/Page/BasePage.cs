@@ -4,6 +4,8 @@ using System;
 using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 using System.Collections.Generic;
 using System.Text;
+using OpenQA.Selenium.Interactions;
+using System.Linq;
 
 namespace second_project.Page
 {
@@ -46,6 +48,35 @@ namespace second_project.Page
         protected void PressKeyboard(By by)
         {
             driver.FindElement(by).SendKeys(Keys.ArrowDown + Keys.ArrowDown + Keys.ArrowDown + Keys.ArrowDown + Keys.Enter);
+            
+        }
+
+        protected void autoCompleteBox()
+        {
+            Actions builder = new Actions(driver);
+            IWebElement webElement = driver.FindElement(By.XPath("//div[@role='status']/div[text()='Asp']"));
+            builder.MoveToElement(webElement).Build().Perform();
+            builder.Click(webElement).Build().Perform();
+        }
+        protected void selectOptionWithText(string textToSelect)
+        {
+        
+            try
+            {
+
+                IWebElement autoOptions = driver.FindElement(By.XPath("//*[@id='ui - id - 1']"));
+                IList<IWebElement> optionsToSelect = autoOptions.FindElements(By.TagName("li"));
+                foreach (IWebElement option in optionsToSelect)
+                {
+                    Console.WriteLine(textToSelect);
+                    option.Click();
+                    break;
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Data);
+            }
         }
        
         protected string GetTextAlert()

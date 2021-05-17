@@ -23,26 +23,26 @@ namespace second_project.Page
         }
 
 
-        public void CheckInteractionsSection(string str)
+        public string CheckInteractionsSection(string str)
         {
             string value = GetText(interactionsSection);
-            Assert.AreEqual(str, value);
+            return value;
         }
 
-        public void CheckWidgetSection(string str)
+        public string CheckWidgetSection(string str)
         {
             string value = GetText(widgetSection);
-            Assert.AreEqual(str, value);
+            return value;
         }
-        public void CheckEffectsSection(string str)
+        public string CheckEffectsSection(string str)
         {
             string value = GetText(effectsSection);
-            Assert.AreEqual(str, value);
+            return value;
         }
-        public void CheckUtilitiesSection(string str)
+        public string CheckUtilitiesSection(string str)
         {
             string value = GetText(utilitiesSection);
-            Assert.AreEqual(str, value);
+            return value;
         }
 
        

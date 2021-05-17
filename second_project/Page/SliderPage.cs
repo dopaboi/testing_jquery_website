@@ -24,14 +24,14 @@ namespace second_project.Page
             Click(sliderPoint);
         }
 
-        public void inputSlider(string number)
+        public string inputSlider(string number)
         {
             SwitchTo(iframe);
             SendKeys(inputFIeld, number);
             Click(buttonGetValue);
             string value = GetTextAlert();
             AcceptAlert();
-            Assert.AreEqual(number, value);
+            return value;
         }
 
 
