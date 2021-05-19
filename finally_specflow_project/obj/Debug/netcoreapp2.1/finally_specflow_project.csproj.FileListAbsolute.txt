@@ -1,0 +1,17 @@
+D:\project\finally_specflow_project\finally_specflow_project\bin\Debug\netcoreapp2.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
+D:\project\finally_specflow_project\finally_specflow_project\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
+D:\project\finally_specflow_project\finally_specflow_project\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
+D:\project\finally_specflow_project\finally_specflow_project\bin\Debug\netcoreapp2.1\nunit.engine.dll
+D:\project\finally_specflow_project\finally_specflow_project\bin\Debug\netcoreapp2.1\nunit.engine.api.dll
+D:\project\finally_specflow_project\finally_specflow_project\bin\Debug\netcoreapp2.1\nunit.engine.core.dll
+D:\project\finally_specflow_project\finally_specflow_project\bin\Debug\netcoreapp2.1\finally_specflow_project.deps.json
+D:\project\finally_specflow_project\finally_specflow_project\bin\Debug\netcoreapp2.1\finally_specflow_project.runtimeconfig.json
+D:\project\finally_specflow_project\finally_specflow_project\bin\Debug\netcoreapp2.1\finally_specflow_project.runtimeconfig.dev.json
+D:\project\finally_specflow_project\finally_specflow_project\bin\Debug\netcoreapp2.1\finally_specflow_project.dll
+D:\project\finally_specflow_project\finally_specflow_project\obj\Debug\netcoreapp2.1\finally_specflow_project.csprojAssemblyReference.cache
+D:\project\finally_specflow_project\finally_specflow_project\obj\Debug\netcoreapp2.1\finally_specflow_project.csproj.CoreCompileInputs.cache
+D:\project\finally_specflow_project\finally_specflow_project\obj\Debug\netcoreapp2.1\finally_specflow_project.AssemblyInfoInputs.cache
+D:\project\finally_specflow_project\finally_specflow_project\obj\Debug\netcoreapp2.1\finally_specflow_project.AssemblyInfo.cs
+D:\project\finally_specflow_project\finally_specflow_project\bin\Debug\netcoreapp2.1\finally_specflow_project.pdb
+D:\project\finally_specflow_project\finally_specflow_project\obj\Debug\netcoreapp2.1\finally_specflow_project.dll
+D:\project\finally_specflow_project\finally_specflow_project\obj\Debug\netcoreapp2.1\finally_specflow_project.pdb
