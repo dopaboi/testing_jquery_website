@@ -1,5 +1,5 @@
 ﻿Feature: Demos
-	
+Checks if the page has headers with the right text
 
 @mytag
 Scenario: There are Headers on the Page

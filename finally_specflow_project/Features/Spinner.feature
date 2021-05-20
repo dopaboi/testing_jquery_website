@@ -1,5 +1,6 @@
-﻿  
-Feature: SpinnerPage
+﻿  Feature: SpinnerPage
+  It is checked that when you entered a number in inputfield,
+  the same number was in alert
 
 @mytag
 Scenario: Entering data into a SpinnerBox

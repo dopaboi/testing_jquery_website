@@ -1,5 +1,6 @@
 ﻿Feature: AutoComplete
-
+Checking the operation of the Autocomplete page. 
+You enter a symbol and check if it is possible to choose a value from the drop-down list
 
 @mytag
 Scenario: Does Autocomplete Work
