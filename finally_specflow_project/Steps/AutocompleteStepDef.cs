@@ -1,40 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 using finally_specflow_project.Page;
 using NUnit.Framework;
 
 namespace finally_specflow_project.Steps
 {
     [Binding]
-    public sealed class AutocompleteStepDef
+    public class AutocompleteStepDef
     {
         private AutocompletePage autocompletePage = new AutocompletePage();
 
-        [Given(@"Go to the Autocomplete Page")]
-        public void GivenGoToTheAutocompletePage()
+        [StepDefinition(@"Go to the Autocomplete Page")]
+        public void GoToTheAutocompletePage()
         {
             autocompletePage.GoToAutocompletePage();
         }
 
-        [Given(@"I enter the character '(.*)' in Autocomplete field")]
-        public void GivenIEnterTheCharacterInAutocompleteField(string characterToInput)
+        [StepDefinition(@"I enter the character '(.*)' in Autocomplete field")]
+        public void IEnterTheCharacterInAutocompleteField(string characterToInput)
         {
             autocompletePage.EnterTheCharacter(characterToInput);
         }
 
-        [When(@"I search '(.*)' in the list")]
-        public void WhenISearchInTheList(string valueFromDropdown)
+        [StepDefinition(@"I search '(.*)' in the list")]
+        public void ISearchInTheList(string valueFromDropdown)
         {
             autocompletePage.SearchInTheDropdown(valueFromDropdown);
         }
 
         [Then(@"In the InputField must have '(.*)'")]
-        public void ThenInTheInputFieldMustHave(string textFromInput)
+        public void InTheInputFieldMustHave(string textFromInput)
         {
-            Assert.AreEqual(textFromInput, autocompletePage.GetTextFromField());
+            Assert.AreEqual(textFromInput, autocompletePage.GetValueFromField());
         }
 
     }

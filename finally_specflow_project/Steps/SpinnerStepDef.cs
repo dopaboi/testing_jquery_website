@@ -7,38 +7,36 @@ using static finally_specflow_project.Drivers.WebDriver;
 namespace finally_specflow_project.Steps
 {
     [Binding]
-    public sealed class SpinnerStepDef
+    public class SpinnerStepDef
     {
-
         private readonly SpinnerPage spinnerPage = new SpinnerPage();
-    
 
-        [Given(@"I navigate to Jquery site")]
-        public void GivenINavigateToJquerySite()
+        [StepDefinition(@"I navigate to Jquery site")]
+        public void INavigateToJquerySite()
         {
             spinnerPage.OpenLink();
         }
 
-        [Given(@"Go to the Spinner page")]
-        public void GivenGoToTheSpinnerPage()
+        [StepDefinition(@"Go to the Spinner page")]
+        public void GoToTheSpinnerPage()
         {
             spinnerPage.GoToSpinnerPage();
         }
 
-        [Given(@"I enter the number (.*) in Input")]
-        public void GivenIEnterTheNumberInInput(string numberToInput)
+        [StepDefinition(@"I enter the number (.*) in Input")]
+        public void IEnterTheNumberInInput(string numberToInput)
         {
             spinnerPage.InputValueInSpinnerBox(numberToInput);
         }
 
-        [When(@"Сlick on the get value button")]
-        public void WhenСlickOnTheGetValueButton()
+        [StepDefinition(@"Сlick on the get value button")]
+        public void СlickOnTheGetValueButton()
         {
             spinnerPage.ClickGetValueButton();
         }
 
         [Then(@"The number in the alert must equal our (.*)")]
-        public void ThenTheNumberInTheAlertMustEqualOur(string numberFromAlert)
+        public void TheNumberInTheAlertMustEqualOur(string numberFromAlert)
         {
             string value = spinnerPage.GetTextFromAlert();
             Assert.AreEqual(value, numberFromAlert);

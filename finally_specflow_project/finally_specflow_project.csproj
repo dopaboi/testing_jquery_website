@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Hooks\Hooks1.cs">
+    <Compile Update="Hooks\HookInitialization.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Steps\AutocompleteStepDef.cs">

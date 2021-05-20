@@ -1,12 +1,9 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using static finally_specflow_project.Drivers.WebDriver;
+
 
 namespace finally_specflow_project.Page
 {
-    class SpinnerPage
+    class SpinnerPage: BasePage
     {
         private readonly By spinnerPoint = By.LinkText("Spinner");
         private readonly By iframe = By.CssSelector(".demo-frame");
@@ -15,26 +12,26 @@ namespace finally_specflow_project.Page
 
         public void OpenLink()
         {
-            Driver.Navigate().GoToUrl("https://jqueryui.com/");
+            OpenLink("https://jqueryui.com/");
         }
 
         public void GoToSpinnerPage()
         {
-            Driver.FindElement(spinnerPoint).Click();
+            Click(spinnerPoint);
         }
-        public void InputValueInSpinnerBox(string p0)
+        public void InputValueInSpinnerBox(string numberInSpinnerBox)
         {
-            Driver.SwitchTo().Frame(Driver.FindElement(iframe));
-            Driver.FindElement(inputFIeld).SendKeys(p0);
+            SwitchTo(iframe);
+            SendKeys(inputFIeld, numberInSpinnerBox);
         }
         public void ClickGetValueButton()
         {
-            Driver.FindElement(buttonGetValue).Click();
+            Click(buttonGetValue);
         }
         public string GetTextFromAlert()
         {
-            string value = Driver.SwitchTo().Alert().Text;
-            Driver.SwitchTo().Alert().Accept();
+            string value = GetTextAlert();
+            AcceptAlert();
             return value;
         }
     }

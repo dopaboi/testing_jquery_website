@@ -27,7 +27,7 @@ namespace finally_specflow_project.Drivers
             Driver.Manage().Window.Maximize();
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(0);
         }
-        public static void endTest()
+        public static void QuitBrowser()
         {
             Driver.Quit();
             Driver.Dispose();
